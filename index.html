@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Penilaian Grade Mahasiswa Berdasarkan IPK</h2>
+    <label for="ipk">Masukkan IPK Mahasiswa:</label>
+    <input type="number" id = "ipk" step="0.01" min="0" max="4">
+    <button onclick="tentukanGrade()">Tentukan Grade</button>
+    <p id = "hasil"></p>
+
+    <script>
+        const targetNumber=Math.floor(Math.random()*100)+1;
+        //Variabel untuk menyimpan jumlah percobaan
+        let attempts = 0;
+        let guess = 0;
+
+        //Loop hingga tebakan benar
+        while (guess !== targetNumber) {
+        // Buat tebakan random
+        guess = Math.floor(Math.random() * 100) + 1;
+        attempts++;
+}
+
+console.log(`Tebakan berhasil setelah ${attempts} kali percobaan. Angka yang ditebak adalah ${targetNumber}.`);
+
+
+        // function tentukanGrade(){
+        //     let ipk=parseFloat(document.getElementById("ipk").value);
+        //     let grade;
+            // if (ipk > 3.5){
+            //     grade = "Cumlaude"
+            // } else if (ipk >= 3 && ipk <= 3.5){
+            //     grade = "Baik"
+            // } else if (ipk<3){
+            //     grade ="Cukup"
+            // };
+
+            // for (let i = 0; i<5;i++){
+            //     console.log(i)
+            // }
+
+
+
+
+            document.getElementById("hasil").innerHTML = "Grade: "+ grade;
+        }
+
+
+    </script>
+
+
+    <!-- <h2>Contoh Penggunaan Operator dalam JavaScript</h2>
+    <p id="arithmetic"></p>    
+    <p id="comparison"></p>
+    <p id="logical"></p>
+    <p id="assignment"></p>
+
+    <script>
+        // Operator Aritmatika
+        let a = 10;
+        let b = 5;
+        let arithmeticResult = `
+        Addition: ${a + b}<br>
+        Subtraction: ${a - b}<br>
+        Multiplication: ${a * b}<br>
+        Division: ${a / b}<br>
+        Modulus: ${a % b}<br>
+        Exponentiation: ${a ** b}<br>
+        Increment: ${++a}<br>
+        Decrement:${--b}
+        `;
+        document.getElementById("arithmetic").innerHTML=arithmeticResult
+        //Operator Perbandingan
+        let x = 10;
+        let y = 5;
+        let comparisonResult = `
+            Equal: ${x == y } <br>
+            Not Equal: ${x != y } <br>
+            Strict Equal: ${x === y } <br>
+            Strict Not Equal: ${x !== y } <br>
+            Greater than: ${x > y } <br>
+            Less than: ${x < y } <br>
+            Greater than or equal: ${x >= y } <br>
+            Less than or equal: ${x <= y } <br>
+        `;
+
+        document.getElementById('comparison').innerHTML = comparisonResult;
+
+        //Operator Logika
+        let p = true;
+        let q = false;
+        let logicalResult=`
+        AND: ${p && q}<br>
+        OR: ${p || q}<br>
+        NOT: ${!p}<br>
+        Ternary: ${p ? "True" : "False"}
+        `;
+
+        //Operator Assignment
+        let m = 10;
+        m += 5; //m = m + 5
+        m -= 3; //m = m - 3
+        m *= 2; //m = m * 2
+        m /= 4; //m = m / 4
+        m %= 3; //m = m % 3
+        let assignmentResult = `Final value of m:${m}`;
+        document.getElementById("assignment").innerHTML = assignmentResult;
+    </script>
+     -->
+    
+    
+    <!-- <h2>Variabel dan Tipe Data JavaScript</h2>
+    <p id="output1"></p>
+    <p id="output2"></p>
+    <p id="output3"></p>
+
+    <script>
+        //Deklarasi Variabel
+        let numberVariable = 42; //Tipe data number
+        let stringVariable = "Hello world!"; //Tipe data string
+        let booleanVariable = true; // Tipe data boolean
+
+        //Menampilkan Nilai Variabel
+        document.getElementById("output1").innerHTML = "Nilai dari numberVariable: " + numberVariable;
+        document.getElementById("output2").innerHTML = "Nilai dari stringVariable: " + stringVariable;
+        document.getElementById("output3").innerHTML = "Nilai dari booleanVariable: " + booleanVariable;
+    </script> -->
+    <!-- <h2>JavaScript Functions</h2>
+    <p> This example calls a function which performs a calculation, and returns the result:</p>
+    <p id="demo"></p>
+
+    <script>
+        function myFunction(p1,p2){
+            return p1*p2;
+        }
+        document.getElementById("demo").innerHTML=myFunction(4,3);
+    </script> -->
+</body>
+</html>
